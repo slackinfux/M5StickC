@@ -1,4 +1,4 @@
-# M5StickC Library
+# M5StickC Library - NoLCD version - This fork has the LCD code removed so that it will work with Bodmer's TFT_eSPI library
 
 English | [中文](README_cn.md)
 
