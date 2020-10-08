@@ -7,7 +7,7 @@ M5StickC::M5StickC():isInited(0) {
 
 }
 
-void M5StickC::begin(bool LCDEnable, bool PowerEnable, bool SerialEnable){
+void M5StickC::begin(bool PowerEnable, bool SerialEnable){
 	
 	//! Correct init once
 	if (isInited) return;
@@ -24,11 +24,6 @@ void M5StickC::begin(bool LCDEnable, bool PowerEnable, bool SerialEnable){
     // Power
 	if (PowerEnable) {
 		Axp.begin();
-	}
-
-	// LCD INIT
-	if (LCDEnable) {
-		Lcd.begin();
 	}
 
 	if (SerialEnable) {

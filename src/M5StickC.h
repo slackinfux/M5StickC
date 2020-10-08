@@ -67,7 +67,7 @@
 #include <Wire.h>
 #include <SPI.h>
 
-#include "M5Display.h"
+
 #include "AXP192.h"
 
 #include "utility/Config.h"
@@ -84,11 +84,10 @@ class M5StickC {
 
  public:
     M5StickC();
-	void begin(bool LCDEnable=true, bool PowerEnable=true, bool SerialEnable=true);
+	void begin(bool PowerEnable=true, bool SerialEnable=true);
     void update();
 
     //!LCD
-    M5Display Lcd = M5Display();
 
     //!Power
     AXP192 Axp = AXP192();
@@ -113,7 +112,6 @@ class M5StickC {
 
 extern M5StickC M5;
 #define m5 M5
-#define lcd Lcd
 #define axp Axp
 #define imu Imu
 #define IMU Imu
